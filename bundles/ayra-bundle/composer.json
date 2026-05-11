@@ -1,0 +1,23 @@
+{
+  "name": "ayra/ayra-bundle",
+  "description": "Example Pimcore Studio plugin bundle (left sidebar icon + Webpack entry registration)",
+  "type": "pimcore-bundle",
+  "license": "MIT",
+  "require": {
+    "php": "~8.4.0 || ~8.5.0",
+    "pimcore/pimcore": "^2026.1",
+    "pimcore/studio-ui-bundle": "^2026.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ayra\\Bundle\\AyraBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "Ayra\\Bundle\\AyraBundle\\AyraBundle"
+      ]
+    }
+  }
+}

@@ -1,0 +1,3 @@
+/node_modules/
+/public/studio/build/*
+!/public/studio/build/.gitkeep

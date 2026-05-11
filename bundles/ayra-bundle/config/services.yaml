@@ -1,0 +1,20 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  # Option providers are resolved with `new ClassName()` unless prefixed with @ — must stay public.
+  Ayra\Bundle\AyraBundle\DataObject\IndiaStateSelectOptionsProvider:
+    public: true
+
+  Ayra\Bundle\AyraBundle\DataObject\IndiaCitySelectOptionsProvider:
+    public: true
+    arguments:
+      $requestStack: '@request_stack'
+
+  Ayra\Bundle\AyraBundle\Webpack\WebpackEntryPointProvider:
+    tags:
+      - { name: 'pimcore_studio_ui.webpack_entry_point_provider' }
+
+  Ayra\Bundle\AyraBundle\EventSubscriber\DataObject\ProductsIndiaGeoStateCitySubscriber: ~
