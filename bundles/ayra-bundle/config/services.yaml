@@ -18,3 +18,10 @@ services:
       - { name: 'pimcore_studio_ui.webpack_entry_point_provider' }
 
   Ayra\Bundle\AyraBundle\EventSubscriber\DataObject\ProductsIndiaGeoStateCitySubscriber: ~
+
+  Ayra\Bundle\AyraBundle\Studio\DataObject\Data\Adapter\ButtonDataAdapter: ~
+
+  Ayra\Bundle\AyraBundle\Controller\StudioGoogleOAuthController:
+    arguments:
+      $clientId: '%env(string:AYRA_GOOGLE_OAUTH_CLIENT_ID)%'
+      $clientSecret: '%env(string:AYRA_GOOGLE_OAUTH_CLIENT_SECRET)%'

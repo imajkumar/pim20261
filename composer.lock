@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "246142f10fd0e870dce4033292b13960",
+    "content-hash": "58ad3a3c998869a0777597ea6f6ee609",
     "packages": [
         {
             "name": "ayra/ayra-bundle",
@@ -7024,6 +7024,41 @@
                 "source": "https://github.com/scheb/2fa-google-authenticator/tree/v8.5.0"
             },
             "time": "2026-01-24T13:27:55+00:00"
+        },
+        {
+            "name": "shareddrive/shareddrivebundle",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "bundles/SharedDriveBundle",
+                "reference": "6f99170dc91f03a624337c8450676a3fbbd4c9df"
+            },
+            "require": {
+                "php": "~8.4.0 || ~8.5.0",
+                "pimcore/pimcore": "^2026.1",
+                "pimcore/studio-ui-bundle": "^2026.1"
+            },
+            "type": "pimcore-bundle",
+            "extra": {
+                "pimcore": {
+                    "bundles": [
+                        "SharedDrive\\Bundle\\SharedDriveBundle\\SharedDriveBundle"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SharedDrive\\Bundle\\SharedDriveBundle\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Pimcore Studio plugin for Shared Drive (DigitalAsset qrCode download)",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "spatie/image-optimizer",
@@ -16469,5 +16504,5 @@
         "php": "~8.4.0 || ~8.5.0"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

@@ -7,6 +7,7 @@
  * Fields Summary:
  * - state [select]
  * - city [select]
+ * - kkk [password]
  */
 
 return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -16,7 +17,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => '',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1778526204,
+   'modificationDate' => 1778774752,
    'userOwner' => 1,
    'userModification' => 1,
    'parentClass' => '',
@@ -138,6 +139,101 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             ),
              'fieldtype' => 'fieldcontainer',
              'layout' => 'hbox',
+             'labelWidth' => 100,
+             'labelAlign' => 'left',
+          )),
+          1 => 
+          \Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+             'name' => 'ajpanel',
+             'type' => NULL,
+             'region' => '',
+             'title' => 'Aj panel',
+             'width' => 0,
+             'height' => 0,
+             'collapsible' => false,
+             'collapsed' => false,
+             'bodyStyle' => NULL,
+             'datatype' => 'layout',
+             'children' => 
+            array (
+              0 => 
+              \Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
+                 'name' => 'Layout',
+                 'type' => NULL,
+                 'region' => '',
+                 'title' => '',
+                 'width' => 0,
+                 'height' => 0,
+                 'collapsible' => false,
+                 'collapsed' => false,
+                 'bodyStyle' => NULL,
+                 'datatype' => 'layout',
+                 'children' => 
+                array (
+                  0 => 
+                  \Pimcore\Model\DataObject\ClassDefinition\Layout\Text::__set_state(array(
+                     'name' => 'Layout',
+                     'type' => NULL,
+                     'region' => '',
+                     'title' => '',
+                     'width' => 0,
+                     'height' => 0,
+                     'collapsible' => false,
+                     'collapsed' => false,
+                     'bodyStyle' => NULL,
+                     'datatype' => 'layout',
+                     'children' => 
+                    array (
+                    ),
+                     'locked' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'fieldtype' => 'text',
+                     'html' => '',
+                     'renderingClass' => '',
+                     'border' => false,
+                  )),
+                  1 => 
+                  \Pimcore\Model\DataObject\ClassDefinition\Data\Password::__set_state(array(
+                     'name' => 'kkk',
+                     'title' => '',
+                     'tooltip' => '',
+                     'mandatory' => false,
+                     'noteditable' => false,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => NULL,
+                     'permissions' => NULL,
+                     'fieldtype' => '',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => true,
+                     'visibleSearch' => true,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'minimumLength' => NULL,
+                     'width' => NULL,
+                  )),
+                ),
+                 'locked' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'fieldtype' => 'tabpanel',
+                 'border' => false,
+                 'tabPosition' => 'top',
+              )),
+            ),
+             'locked' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'fieldtype' => 'panel',
+             'layout' => NULL,
+             'border' => true,
+             'icon' => NULL,
              'labelWidth' => 100,
              'labelAlign' => 'left',
           )),

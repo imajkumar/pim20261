@@ -7,5 +7,5 @@ return [
     Pimcore\Bundle\StudioBackendBundle\PimcoreStudioBackendBundle::class => ['all' => true],
     Pimcore\Bundle\StudioUiBundle\PimcoreStudioUiBundle::class => ['all' => true],
     Pimcore\Bundle\QuillBundle\PimcoreQuillBundle::class => ['all' => true],
-    Ayra\Bundle\AyraBundle\AyraBundle::class => ['all' => true],
+    SharedDrive\Bundle\SharedDriveBundle\SharedDriveBundle::class => ['all' => true],
 ];

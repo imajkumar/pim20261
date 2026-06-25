@@ -4,3 +4,7 @@ _pimcore:
 app:
     resource: "../src/Controller/"
     type: attribute
+
+ayra_bundle:
+    resource: "../bundles/ayra-bundle/src/Controller/"
+    type: attribute

@@ -20,6 +20,13 @@
       "options": {
         "symlink": true
       }
+    },
+    {
+      "type": "path",
+      "url": "bundles/SharedDriveBundle",
+      "options": {
+        "symlink": true
+      }
     }
   ],
   "require": {
@@ -27,6 +34,7 @@
     "pimcore/pimcore": "^2026.1.0",
     "pimcore/platform-version": "^2026.1.0",
     "ayra/ayra-bundle": "*",
+    "shareddrive/shareddrivebundle": "*",
     "pimcore/quill-bundle": "*",
     "pimcore/studio-ui-bundle": "*",
     "pimcore/studio-backend-bundle": "*",

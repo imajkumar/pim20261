@@ -1,0 +1,23 @@
+{
+  "name": "shareddrive/shareddrivebundle",
+  "description": "Pimcore Studio plugin for Shared Drive (DigitalAsset qrCode download)",
+  "type": "pimcore-bundle",
+  "license": "MIT",
+  "require": {
+    "php": "~8.4.0 || ~8.5.0",
+    "pimcore/pimcore": "^2026.1",
+    "pimcore/studio-ui-bundle": "^2026.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "SharedDrive\\Bundle\\SharedDriveBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "SharedDrive\\Bundle\\SharedDriveBundle\\SharedDriveBundle"
+      ]
+    }
+  }
+}

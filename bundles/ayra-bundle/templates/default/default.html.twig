@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Welcome{% endblock %} — Ayra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg1: #0f0a1a;
+            --bg2: #1a1240;
+            --accent: #8b5cf6;
+            --accent2: #22d3ee;
+            --card: rgba(255, 255, 255, 0.06);
+            --text: #f4f4f5;
+            --muted: #a1a1aa;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "DM Sans", system-ui, sans-serif;
+            color: var(--text);
+            background: radial-gradient(1200px 800px at 10% -10%, #3b1f6b 0%, transparent 55%),
+                        radial-gradient(900px 600px at 100% 0%, #0e7490 0%, transparent 50%),
+                        linear-gradient(165deg, var(--bg1) 0%, var(--bg2) 45%, #0c1222 100%);
+        }
+        .wrap {
+            max-width: 52rem;
+            margin: 0 auto;
+            padding: clamp(2rem, 6vw, 4rem) 1.5rem 4rem;
+        }
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent2);
+            border: 1px solid rgba(34, 211, 238, 0.35);
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
+            background: rgba(34, 211, 238, 0.08);
+        }
+        h1 {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin: 0 0 1rem;
+            letter-spacing: -0.02em;
+        }
+        .lead {
+            font-size: 1.125rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin: 0 0 2rem;
+            max-width: 38rem;
+        }
+        .cards {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            margin-bottom: 2.5rem;
+        }
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 1.35rem 1.5rem;
+            backdrop-filter: blur(12px);
+        }
+        .card h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem;
+            color: #fff;
+        }
+        .card p {
+            margin: 0 0 1rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        .card a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--accent2);
+            text-decoration: none;
+        }
+        .card a:hover { text-decoration: underline; }
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.35rem;
+            border-radius: 0.65rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .btn:hover { transform: translateY(-1px); }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent) 0%, #6366f1 100%);
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(139, 92, 246, 0.35);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .edit {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .edit h2 { font-size: 1.1rem; margin-bottom: 0.75rem; }
+        .edit p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 40rem; }
+        .edit .links { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .edit .links a {
+            color: var(--accent2);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <span class="badge">Ayra bundle</span>
+    <h1>Your Pimcore stack is running</h1>
+    <p class="lead">
+        This page replaces the empty skeleton document view. Use Studio for data objects or open the classic admin when you need it.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h2>Pimcore Studio</h2>
+            <p>Modern UI for documents, assets, and data objects.</p>
+            <a href="/pimcore-studio/">Open Studio →</a>
+        </div>
+        <div class="card">
+            <h2>Admin UI</h2>
+            <p>Classic Pimcore backend and configuration.</p>
+            <a href="/admin">Open admin →</a>
+        </div>
+    </div>
+
+    <div class="actions">
+        <a class="btn btn-primary" href="/pimcore-studio/">Launch Studio</a>
+        <a class="btn btn-secondary" href="/admin">Admin</a>
+    </div>
+
+    {% if editmode %}
+        <div class="edit">
+            <h2>Editing in Pimcore</h2>
+            <p>
+                You are in <strong>edit mode</strong>. Add content to this document in the admin, or install sample data from the
+                Pimcore docs if you want a full demo theme.
+            </p>
+            <div class="links">
+                <a href="https://pimcore.com/docs/platform/Pimcore/Getting_Started/Installation/Webserver_Installation" target="_blank" rel="noopener">Sample data / boilerplate</a>
+                <a href="https://pimcore.com/docs/platform/Pimcore/Getting_Started" target="_blank" rel="noopener">Getting started</a>
+            </div>
+        </div>
+    {% endif %}
+</div>
+</body>
+</html>

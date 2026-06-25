@@ -2,7 +2,9 @@
 
 Example **Pimcore Studio** plugin: adds a **left sidebar** icon that opens a simple **browser alert**. Same overall pattern as **`pimcore/quill-bundle`** (Rsbuild, Module Federation, `WebpackEntryPointProvider`).
 
-## Documentation
+## Default document (homepage)
+
+The skeleton `default/default.html.twig` only shows content in **edit mode**, so `/` looks empty and the Pimcore logo SVG may 404. Ayra registers its own `templates/default/default.html.twig` (via a compiler pass) with a simple landing page and links to **Studio** and **Admin**.
 
 **Full guide:** [doc/STUDIO_PLUGIN.md](doc/STUDIO_PLUGIN.md)  
 **India state/city select providers:** [doc/SELECT_OPTIONS_INDIA.md](doc/SELECT_OPTIONS_INDIA.md)  

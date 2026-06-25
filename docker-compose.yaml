@@ -47,6 +47,7 @@ services:
         environment:
             COMPOSER_HOME: /var/www/html
             PHP_IDE_CONFIG: serverName=localhost
+            PHP_MEMORY_LIMIT: 512M
             # Feed installer configuration via ENV variables.
             # See: https://pimcore.com/docs/pimcore/current/Development_Documentation/Getting_Started/Advanced_Installation_Topics.html#page_Advanced-Installation-Topics
         depends_on:
@@ -55,6 +56,8 @@ services:
         volumes:
             - .:/var/www/html
             - ./.docker/messenger.yaml:/var/www/html/config/packages/messenger.yaml:ro
+            - ./.docker/fix-var-permissions.sh:/usr/local/bin/fix-var-permissions.sh:ro
+        entrypoint: [ "/bin/sh", "/usr/local/bin/fix-var-permissions.sh" ]
 
     supervisord:
         # Match the `php` service `user:` when you uncomment it there (same uid:gid on the host).

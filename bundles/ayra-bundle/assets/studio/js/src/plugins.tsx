@@ -7,7 +7,9 @@ import { installIndiaDependentSelectFetchPatch } from './indiaDependentSelectFet
 import { installIndiaStateSessionWatch } from './installIndiaStateSessionWatch'
 import { mountIndiaGeoCityAttributeSync } from './IndiaGeoCityAttributeSync'
 import { mountAyraCityFieldDrawerButton } from './mountAyraCityFieldDrawerButton'
-
+import { AyraGoogleLoginButton } from './AyraGoogleLoginButton'
+import { registerAyraObjectLayoutButton } from './registerAyraObjectLayoutButton'
+import { registerAyraObjectDataButton } from './registerAyraObjectDataButton'
 installIndiaDependentSelectFetchPatch()
 installIndiaStateSessionWatch()
 mountIndiaGeoCityAttributeSync()
@@ -27,6 +29,9 @@ export const AyraStudioPlugin: IAbstractPlugin = {
   name: 'ayra-studio-plugin',
 
   onInit: ({ container }) => {
+    registerAyraObjectLayoutButton(container)
+    registerAyraObjectDataButton(container)
+
     const componentRegistry = container.get<ComponentRegistry>(
       serviceIds['App/ComponentRegistry/ComponentRegistry']
     )
@@ -35,6 +40,12 @@ export const AyraStudioPlugin: IAbstractPlugin = {
       name: 'ayra-left-sidebar-action',
       priority: 250,
       component: AyraSidebarIcon
+    })
+
+    componentRegistry.registerToSlot(componentConfig.form.login.name, {
+      name: 'ayra-google-login',
+      priority: 100,
+      component: AyraGoogleLoginButton
     })
   }
 }
