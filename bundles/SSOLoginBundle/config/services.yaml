@@ -1,0 +1,31 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  SSOLogin\Bundle\SSOLoginBundle\:
+    resource: '../src/'
+    exclude:
+      - '../src/SSOLoginBundle.php'
+      - '../src/DependencyInjection/'
+
+  SSOLogin\Bundle\SSOLoginBundle\Webpack\WebpackEntryPointProvider:
+    tags:
+      - { name: 'pimcore_studio_ui.webpack_entry_point_provider' }
+
+  SSOLogin\Bundle\SSOLoginBundle\Security\PingSamlAuthFactory:
+    arguments:
+      $idpEntityId: '%env(string:SSO_LOGIN_SAML_IDP_ENTITY_ID)%'
+      $idpSsoUrl: '%env(string:SSO_LOGIN_SAML_IDP_SSO_URL)%'
+      $idpSloUrl: '%env(default::string:SSO_LOGIN_SAML_IDP_SLO_URL)%'
+      $idpX509Cert: '%env(string:SSO_LOGIN_SAML_IDP_X509_CERT)%'
+      $spEntityId: '%env(default::string:SSO_LOGIN_SAML_SP_ENTITY_ID)%'
+      $spBaseUrl: '%env(string:SSO_LOGIN_SAML_SP_BASE_URL)%'
+      $spX509Cert: '%env(string:SSO_LOGIN_SAML_SP_X509_CERT)%'
+      $spPrivateKey: '%env(string:SSO_LOGIN_SAML_SP_PRIVATE_KEY)%'
+      $debug: '%env(bool:SSO_LOGIN_SAML_DEBUG)%'
+
+  SSOLogin\Bundle\SSOLoginBundle\Security\PimcoreSamlUserResolver:
+    arguments:
+      $usernameAttribute: '%env(string:SSO_LOGIN_SAML_USERNAME_ATTRIBUTE)%'

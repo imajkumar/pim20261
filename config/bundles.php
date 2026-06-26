@@ -8,4 +8,5 @@ return [
     Pimcore\Bundle\StudioUiBundle\PimcoreStudioUiBundle::class => ['all' => true],
     Pimcore\Bundle\QuillBundle\PimcoreQuillBundle::class => ['all' => true],
     SharedDrive\Bundle\SharedDriveBundle\SharedDriveBundle::class => ['all' => true],
+    SSOLogin\Bundle\SSOLoginBundle\SSOLoginBundle::class => ['all' => true],
 ];

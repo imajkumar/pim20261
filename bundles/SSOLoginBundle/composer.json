@@ -1,0 +1,24 @@
+{
+  "name": "ssologin/ssologinbundle",
+  "description": "Pimcore Studio SAML SSO login with Ping Identity",
+  "type": "pimcore-bundle",
+  "license": "MIT",
+  "require": {
+    "php": "~8.4.0 || ~8.5.0",
+    "pimcore/pimcore": "^2026.1",
+    "pimcore/studio-ui-bundle": "^2026.1",
+    "onelogin/php-saml": "^4.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "SSOLogin\\Bundle\\SSOLoginBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "pimcore": {
+      "bundles": [
+        "SSOLogin\\Bundle\\SSOLoginBundle\\SSOLoginBundle"
+      ]
+    }
+  }
+}

@@ -8,3 +8,7 @@ app:
 ayra_bundle:
     resource: "../bundles/ayra-bundle/src/Controller/"
     type: attribute
+
+sso_login_bundle:
+    resource: "../bundles/SSOLoginBundle/src/Controller/"
+    type: attribute

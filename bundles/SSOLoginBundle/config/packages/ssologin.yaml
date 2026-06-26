@@ -1,0 +1,11 @@
+parameters:
+    env(SSO_LOGIN_SAML_IDP_ENTITY_ID): ''
+    env(SSO_LOGIN_SAML_IDP_SSO_URL): ''
+    env(SSO_LOGIN_SAML_IDP_SLO_URL): ''
+    env(SSO_LOGIN_SAML_IDP_X509_CERT): ''
+    env(SSO_LOGIN_SAML_SP_ENTITY_ID): ''
+    env(SSO_LOGIN_SAML_SP_BASE_URL): 'http://localhost:8082'
+    env(SSO_LOGIN_SAML_SP_X509_CERT): ''
+    env(SSO_LOGIN_SAML_SP_PRIVATE_KEY): ''
+    env(SSO_LOGIN_SAML_USERNAME_ATTRIBUTE): 'email'
+    env(SSO_LOGIN_SAML_DEBUG): '0'

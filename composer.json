@@ -27,6 +27,13 @@
       "options": {
         "symlink": true
       }
+    },
+    {
+      "type": "path",
+      "url": "bundles/SSOLoginBundle",
+      "options": {
+        "symlink": true
+      }
     }
   ],
   "require": {
@@ -35,6 +42,7 @@
     "pimcore/platform-version": "^2026.1.0",
     "ayra/ayra-bundle": "*",
     "shareddrive/shareddrivebundle": "*",
+    "ssologin/ssologinbundle": "*",
     "pimcore/quill-bundle": "*",
     "pimcore/studio-ui-bundle": "*",
     "pimcore/studio-backend-bundle": "*",
